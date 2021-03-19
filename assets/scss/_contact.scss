@@ -80,11 +80,13 @@
 }
 //BLOQUE ENVIAR CONSULTA- FORMULARIO
 .mensajeSuccess{
+    background-image: url(../../img/img-bg.jpg);
+    background-size: cover;
     width: 300px;
     text-align: center;
-    margin: 3rem auto;
-    padding: 0.5rem 1rem;
-    border: 2px solid $greyText;
+    margin: 5rem auto 3rem auto;
+    padding: 1.5rem 1rem;
+    box-shadow: 0px 0px 10px $greyText;
     border-radius: 15px;
     p{
         margin: 1rem 0;
@@ -137,6 +139,7 @@
 }
 .block-alert{
     text-align: center;
+    height: 50px;
     p{
         margin-bottom: 0rem;
     }

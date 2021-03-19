@@ -8,7 +8,7 @@ document.getElementById("numeroItemsCarrito").innerHTML = `${carrito.length}`;
 var productos;
 $(document).ready(function () {
     $.ajax({
-        url: "/js/datos.json", 
+        url: "../js/datos.json", 
         dataType: "json",
         success: function(data) {
             productos = data;
