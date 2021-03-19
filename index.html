@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elaboración artesanal de Amigrumis, muñequitos tejidos al crochet.">
+    <meta name="keywords" content="amigurimi, amigurimis, muñecos tejidos, crochet, niños, bebés, artesanal">
+    <title>Chinagurumis</title>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nunito&family=Pangolin&display=swap&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <!--Icons-->
+    <link rel="shortcut icon" href="../img/icon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--Bootstrap Jquery, popper, js-->
+    <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- AOS ANIMATION -->
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer src="js/index.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!--menu-->
+    <header class="nav-principal">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="Logo Chinagurumis">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="views/about.html">Sobre mi</a>
+                <a class="nav-link" href="views/products.html">Productos</a>
+                <a class="nav-link" href="views/contact.html">Contacto</a>
+              </div>
+            </div>
+        </nav>
+        <a class="shop-button" href="views/shop.html">
+            <p class="item-amount">
+                <span class="item-amount-number" id="numeroItemsCarrito"></span>
+            </p>
+            <span class="material-icons shop-cart">shopping_cart</span>
+        </a>
+    </header>
+   
+    <section class="container-fluid p-0">
+        <div class="home-ppal-img">
+            <div class="home-img">
+                <img src="img/hilo.jpg" alt="Ovillo de hilo rosa">
+            </div>
+            <div class="home-img-title">
+                <h1>Chinagurumis</h1>
+                <p>Bariloche</p>
+                <p>Patagonia Argentina</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid p-0" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="amigurumi-block">
+            <div class="block">
+                <h4 class="top-text">Muñequitos tejidos al crochet</h4>
+                <h4 class="title">Amigurumis</h4>
+                <p>".. Según la tradición japonesa, cada <span class="resaltar">amigurumi</span> posee un alma, la cual nos acompañará, será nuestra amiga y confidente de por vida, proporcionando protección y consuelo en los momentos de estrés y tristeza"</p>
+            </div>
+        </div>
+    </section>
+  
+    <section class="container-fluid home-products">
+        <h4 class="title-prod" data-aos="fade-up" data-aos-duration="500">Productos</h4>
+        <i class="material-icons" data-aos="fade-up" data-aos-duration="500">favorite</i>
+        <div class="productos-index">
+            <img src="img/productos.png" alt="Productos de Chinagurumis" data-aos="flip-left" data-aos-duration="2500">
+            <button type="button" class="btn btn-light home-prod-btn"><a href="views/products.html">Conocé nuestros productos!</a></button>
+        </div>
+    </section>
+
+    <section class="container-fluid">
+        <a href="views/contact.html">
+            <div class="block-contact-text" data-aos="zoom-in" data-aos-duration="1200">
+                <h4 class="title-contact" id="contact">Contactanos!</h4>
+                <p><i class="fas fa-paper-plane"></i></p>
+            </div>
+        </a>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="container-fluid">
+        <div class="footer">
+            <div class="footer-text">
+                <p class="title">Chinagurumis</p>
+                <p class="text subtitle ">Bariloche - Patagonia Argentina</p>
+                <div class=" text">
+                    <img src="../img/whatsapp.png" alt="whatsapp icon">
+                    <span>15-2222-5555</span>
+                </div>
+                <p class="text">ejemplo@mail.com</p>
+            </div>
+            <div class="media-container">
+                <a href="" target="blank" title="Facebook" class="icon-facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/chinagurumis?igshid=1kjnv7s78jmzc" target="blank" title="Instagram" class="icon-instagram"><i class="fab fa-instagram"></i></a>
+                <a href="" target="blank" title="Mail" class="icon-mail"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <p><i class="far fa-copyright"></i> Copyright 2021 | Chinamiguris</p>
+        </div>
+    </footer>
+
+</body>
+</html>

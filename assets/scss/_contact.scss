@@ -1,0 +1,173 @@
+//BLOQUE PRINCIPAL DE CONTACTO
+.animation-contact{
+    animation: backInUp;
+    animation-duration: 1s;
+}
+.contact-block{
+    .contact-text{
+        margin-bottom: 0.5rem;
+        color: $greyText;
+        font-family: $body;
+        text-align: center;
+        font-size: $small;
+        font-weight: 600;
+        line-height: 24px;
+        span{
+            background-color: $backg;
+            border-radius: 50%;
+            .icon-whatsapp{
+                vertical-align: top;
+                color: $greyText;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .contact-icons{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0rem;
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 1rem;
+            width: 50px;
+            height: 50px;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            border-radius:50%;
+            background-color: $browntext;
+            transition: all 0.3s;
+            i{
+                color: white;
+                font-size: 1.2rem;
+            }
+            &:hover{
+                background-color: $roselight;
+                box-shadow: 0px 0px 10px $greylight;
+                i{
+                    color: $greydark;
+                }
+            }
+        }
+        
+    }
+}
+@media screen and (min-width: 992px){
+    .contact-block{
+        .contact-text{
+            margin-top: 4rem;
+            font-size: $medium;
+            span{
+                .icon-whatsapp{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .contact-icons{
+            a{
+                margin: 1rem 2rem;
+                width: 60px;
+                height: 60px;
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+//BLOQUE ENVIAR CONSULTA- FORMULARIO
+.mensajeSuccess{
+    width: 300px;
+    text-align: center;
+    margin: 3rem auto;
+    padding: 0.5rem 1rem;
+    border: 2px solid $greyText;
+    border-radius: 15px;
+    p{
+        margin: 1rem 0;
+    }
+}
+.mensaje{
+    margin-top: 3rem;
+    .mensaje-title{
+        font-size: $large;
+        font-family: $secondary;
+        font-variant: small-caps;
+        color: $greendark;
+        text-shadow: 5px 5px 3px $greenlight;
+        text-align: center;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+    form{
+        .boxes{
+            color: $greyText;
+            font-size: $small;
+            font-weight: 600;
+            letter-spacing: 2px;
+            .obligatorio{
+                color: rgb(173, 26, 26);
+            }
+            input{
+                font-size: $small;
+                border: none;
+                border-bottom: 1px solid $gris;
+                border-radius: 0px; 
+            }
+            small{
+                letter-spacing: 0px;
+            }
+        }
+        .mensajeBtn{
+            display: block;
+            background-color: $grey;
+            margin: 1rem auto;
+            width: 50%;
+            color: white;
+            font-family: $subtitle;
+            letter-spacing: 2px;
+            &:hover{
+                background-color: $greydark;
+            }
+        }
+    }
+}
+.block-alert{
+    text-align: center;
+    p{
+        margin-bottom: 0rem;
+    }
+}
+@media screen and (min-width: 768px){
+    .mensajeSuccess{
+        width: 600px;
+    }
+    .mensaje{
+        margin-top: 3rem;
+        .mensaje-title{
+            font-size: 1.5rem;
+        }
+        form{
+            width: 60%;
+            margin: 0rem auto;
+            
+            .boxes{
+                font-size: 1rem;
+                input{
+                    font-size: 1rem;
+                }
+            }
+            .mensajeBtn{
+                width: 30%;
+                font-size: 1rem;
+            }
+            
+        }
+    }
+    .block-alert{
+        font-size: $medium;
+    }
+}

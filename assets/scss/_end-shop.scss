@@ -1,0 +1,122 @@
+.resume{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    .row{
+        background-color: rgba($greylight, 0.1);
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        color: $greyText;
+        font-size: $medium;
+        p{
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .row-name-title{
+            flex-basis: 50%;
+        }
+        .row-img{
+            flex-basis: 30%;
+            img{
+                width: 60%;
+                border-radius: 15px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .row-name{
+            flex-basis: 20%;
+            p{
+                text-align: left;
+            }
+            
+        }
+        .row-quantity{
+            flex-basis: 25%;
+            font-family: $body;
+        }
+        .row-price{
+            flex-basis: 25%;
+            margin: 0;
+        }
+    }
+    .row-total{
+        justify-content: space-evenly;
+        letter-spacing: 2px;
+        background-color: $greyText;
+        color: white;
+    }
+    .row-title{
+        background-color: rgba($roselight, 0.4);
+    }
+}  
+@media screen and (min-width: 576px){
+    .resume{
+        .row{
+            justify-content: space-evenly;
+            .row-img{
+                img{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .resume{
+        width: 80%;
+        .row{
+            .row-img{
+                img{
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+.button-mp{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    .img-mp{
+        width: 20%;
+        margin-right: 1rem;
+    }
+    .btn-compra-mp{
+        font-size: $medium;
+        padding: 0.5rem 1.5rem;
+        margin-left: 1rem;
+        font-weight: 600;
+    }
+}
+@media screen and (min-width: 576px){
+    .button-mp{
+        .img-mp{
+            width: 15%;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .button-mp{
+        .img-mp{
+            width: 9%;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .button-mp{
+        .img-mp{
+            width: 6%;
+        }
+    }
+}

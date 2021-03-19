@@ -1,0 +1,506 @@
+@import 'var-mixin';
+@import 'about';
+@import 'products';
+@import 'contact';
+@import 'shop';
+@import 'end-shop';
+@import 'status';
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $backg;
+    font-family: $body;
+    font-size: $medium;
+    color: $greyText;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+::-moz-selection{
+    background-color: $roselight;
+    color: black;
+}
+::selection{
+    background-color: $roselight;
+    color: black;
+}
+a:visited, a:link{
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+}
+//MENU
+.nav-principal{
+    background-color: $backg;
+    box-shadow: 0px -15px 10px -15px $greydark inset; 
+    .navbar{
+        padding: 0rem;
+        margin-right: 5px;
+        display: inline-flex;
+        width: 75%;
+        .navbar-brand{
+            width: 30%;
+            img{
+                margin-left: 1rem;
+                width: 70%;
+                border-radius: 50%;
+                box-shadow: 0px 0px 10px $marronado;
+            }
+        }
+        .navbar-collapse{
+            .navbar-nav{
+                padding-top: 1rem;
+                height: 100vh;
+                width: 100vw;
+                background-color: rgba($verde, 0.3);
+                .nav-link{
+                    margin: 0.75rem auto;
+                    padding: 0.25rem 0rem;
+                    color: $greyText;
+                    font-family: $subtitle;
+                    font-size: 1.2rem;
+                    background-color: white;
+                    box-shadow: 0px 0px 8px $greyText;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    width: 70%;
+                    text-align: center;
+                    &:active{
+                        box-shadow: 0px 0px 5px $greyText;
+                    }
+                }
+            }
+        }
+    }
+    .shop-button{
+        background-color: $browntext;
+        border: 1px solid $browntext;
+        box-shadow: 0px 0px 5px $greyShadow;
+        border-radius: 5px;
+        font-family: $subtitle;
+        font-size: $medium;
+        padding: 0.4rem 0.2rem;
+        display: inline-flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 75px;
+        .item-amount{
+            display: inline-block;
+            color: $browntext;
+            background-color: white;
+            margin: 0;
+            border-radius: 50%;
+            width: 27px;
+            text-align: center;
+            .item-amount-number{
+                display: inline-block;
+                line-height: 10px;
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+        }
+        .shop-cart{
+            color: white;
+        }
+        &:hover, &:active{
+            background-color: $rose;
+            border: 1px solid $rose;
+            box-shadow: 0px 0px 5px $browntext;
+            .item-amount{
+                color: $rose;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 420px){
+    .nav-principal{
+        .navbar{
+            width: 80%;
+            .navbar-brand{
+                img{
+                    width: 50%;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 576px){
+    .nav-principal{
+        .navbar{
+            width: 85%;
+            .navbar-brand{
+                img{
+                    width: 40%;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .nav-principal{
+        .navbar{
+            width: 88%;
+            .navbar-brand{
+                img{
+                    width: 30%;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .nav-principal{
+        .navbar{
+            width: 90%;
+            .navbar-brand{
+                img{
+                    width: 25%;
+                    margin-left: 2rem;
+                }
+            }
+            .navbar-collapse{
+                position: relative;
+                .navbar-nav{
+                    padding-top: 0rem;
+                    height: unset;
+                    width: unset;
+                    position: absolute;
+                    right: 0;
+                    background-color: $backg;
+                    .nav-link{
+                        margin: 0.5rem 1rem;
+                        padding: 0.4rem 0rem;
+                        width: 120px;
+                        border: none;
+                        box-shadow: 0px 0px 5px $greyShadow;
+                        font-size: $medium;
+                        transition: all 0.2s;
+                        &:hover, &:active{
+                            box-shadow: 0px 0px 10px $browntext;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//IMAGEN PRINCIPAL
+.home-ppal-img{
+    position: relative;
+    background-color: $greydark;
+    .home-img{
+        img{
+            width: 100%;
+        }
+    }
+    .home-img-title{
+        z-index: 1;
+        position: absolute;
+        top: 15%;
+        left: 7%;
+        color: $backg;
+        font-family: $primary;
+        h1{
+            font-size: 3rem;
+            margin: 0rem;
+            padding: 0rem;
+            text-shadow: 5px 5px 5px $greydark;
+        }
+        p{
+            font-size: $large;
+            text-shadow: 5px 5px 5px $grey;
+            margin: 0;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .home-ppal-img{
+        .home-img{
+            height: 650px;
+            width: 100%;
+            img{
+                width: 100%;
+                height: inherit;
+            }
+        }
+        .home-img-title{
+            position: absolute;
+            top: 30%;
+            left: 7%;
+            h1{
+                font-size: 5rem;
+            }
+            p{
+                font-size: 2.5rem;
+                text-shadow: 5px 5px 5px $grey;
+            }
+        }
+    }
+}
+// CUADRO AMIGURURMIS
+.amigurumi-block{
+    .block{
+        align-self: center;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 3rem 1rem;
+        text-align: center;
+        background-image: linear-gradient(to right, $brown, $backg);
+        .top-text{
+            font-family: $subtitle;
+            color: $rose;
+            font-size: $medium;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 5px 5px 5px $verde;
+            margin-bottom: 1rem;
+        }
+        .title{
+            @include titles();
+            font-size: 2rem;
+        }
+        p{
+            font-family: $secondary;
+            font-size: $small;
+            color: $greyText;
+            font-style: oblique;
+            margin-bottom: 0;
+            .resaltar{
+                font-weight: bold;
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .amigurumi-block{
+        .block{
+            align-self: center;
+            margin: 2rem auto;
+            padding: 2rem 2rem;
+            width: 70%;
+            border-radius: 10px;
+            .top-text{
+                font-size: $large;
+            }
+            .title{
+                font-size: 3rem;
+            }
+            p{
+                font-size: $medium;
+            }
+        }
+    }
+}
+//CUADRO PRODUCTOS
+.home-products{
+    margin: 1rem 0rem;
+    padding: 1rem 0rem;
+    .title-prod{
+        @include titles();
+        margin: 0;
+    }
+    i{
+        display: block;
+        color: $rose;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .productos-index{
+        margin: 0rem 1rem;
+        padding: 1rem 0rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        img{
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 15px $browntext;
+        }
+        .home-prod-btn{
+            font-family: $subtitle;
+            background-color: $browntext;
+            border: 2px solid $brownbtn;
+            display: block;
+            margin: 0.5rem auto;
+            color: white;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            box-shadow: 5px 5px 5px $greylight;
+            &:hover, &:active{
+                background-color: white;
+                color: $browntext;
+                border: 2px solid $brownbtn;
+            }
+        }
+    }
+}
+@media screen and (min-width: 420px){
+    .home-products{
+        .productos-index{
+            img{
+                width: 70%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 576px){
+    .home-products{
+        .productos-index{
+            img{
+                width: 50%;
+            }
+        }
+        .home-prod-btn{
+            a{
+                font-size: 1.2rem;
+            } 
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .home-products{
+        .title-prod{
+            font-size: 3rem;
+        }
+        i{
+            font-size: 2rem;
+        }
+        .productos-index{
+            margin: 0rem 0rem;
+            padding: 2rem 2rem;
+            background-color: rgba($brown, 0.8);
+            justify-content: space-evenly;
+            img{
+                flex-basis: 30%;
+            }
+            .home-prod-btn{
+                flex-basis: 40%;
+                display: block;
+                margin: 0.5rem 0rem;
+                padding: 1.5rem 2rem;
+                a{
+                    font-size: $large;
+                }
+            }
+        }
+    }
+}
+//CUADRO CONTACTO
+
+.block-contact-text{
+    .title-contact{
+        margin: 0;
+        @include titles();
+        text-shadow: none;
+    }
+    p{
+        text-align: center;
+        margin: 0;
+        color: $green;
+        font-size: $large;
+    }
+}
+
+@media screen and (min-width: 992px){
+    
+    .block-contact-text{
+        margin: 0 auto;
+        background-image: linear-gradient(to left, $brown, $backg);
+        width: 70%;
+        border-radius: 10px;
+        padding: 2rem 0;
+        .title-contact{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/*FOOTER*/
+footer{
+    margin: 2rem 0px 0px 0px;
+    padding: 1.5rem 0rem 0.5rem 0rem;
+    background-color: $roselight;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    .footer-text{
+        .title{
+            @include titles();
+            color: $greyText;
+            text-shadow: 5px 5px 5px $greylight;
+            font-weight: 400;
+            margin: 0;
+        }
+        .text{
+            margin-bottom: 0.5rem;
+            color: $greyText;
+            font-family: $body;
+            text-align: center;
+            font-size: $small;
+            font-weight: 600;
+            line-height: 24px;            
+        }
+        .subtitle{
+            font-size: 1.2rem;
+            font-family: $primary;
+            font-weight: 400;
+        }
+    }
+    .media-container{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0rem;
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 1rem;
+            width: 50px;
+            height: 50px;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            border-radius:50%;
+            i{
+                color: white;
+                font-size: $large;
+            }
+        }
+        .icon-facebook{
+            background-color: #3B5998;
+        }
+        .icon-instagram{
+            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        }
+        .icon-mail{
+            background-color:#BD3518;
+        }
+    }
+    .footer-copyright{
+        p{
+            margin: 0;
+            font-size: 0.6rem;
+            color: $greyText;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+    }
+}

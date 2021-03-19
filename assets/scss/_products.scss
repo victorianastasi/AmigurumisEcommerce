@@ -1,0 +1,355 @@
+//ESTILO DE CARDS DE PRODUCTOS
+.products{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1.5rem 0rem;
+    padding: 0;
+    .card-products{
+        margin: 0.75rem 0.5rem;
+        width: 10rem;
+        border: 1px solid $verde;
+        border-radius: 5px;
+        background-color: rgba($verde, 0.3);
+        box-shadow: 3px 3px 5px $verde;
+        .card-img-top{
+            width: 100%;
+            align-self: center;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .card-body{
+            font-size: $small;
+            color: $greyText;
+            padding: 0.5rem 0rem;
+            text-align: center;
+            position: relative;
+            .card-title{
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+                font-size: $medium;
+            }
+            .card-text{
+                margin-bottom: 0.5rem;
+            }
+            .btn-purchase{
+                background-color: $grey;
+                color: white;
+                font-family: $subtitle;
+                font-size: 0.8rem;
+                border: 1px solid $grey;
+                letter-spacing: 2px;
+                position: relative;
+                overflow: hidden;
+                &:hover{
+                    background-color: $greydark;
+                }
+                &:after {
+                    content: "";
+                    background: $brownbtn;
+                    display: block;
+                    position: absolute;
+                    padding-top: 300%;
+                    padding-left: 450%;
+                    margin-left: -220px;
+                    margin-top: -120%;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: all 0.8s
+                }
+                &:active:after {
+                    padding: 0;
+                    margin: 0;
+                    opacity: 1;
+                    transition: 0s
+                }
+            }
+            .btn-modal{
+                border: none;
+                border-radius: 50%;
+                background-color: rgba($verde, 0.7);
+                position: absolute;
+                top: -40px;
+                right: 2px;
+                width: 40px;
+                height: 40px;
+                i{
+                    color: $greydark;
+                    font-size: $small;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 576px){
+    .products{
+        margin: 0;
+    }
+}
+@media screen and (min-width: 992px){
+    .products{
+        justify-content: center;
+        .card-products{
+            width: 15rem;
+            margin: 1rem 1rem;
+            transition: all 0.3s;
+            &:hover{
+                box-shadow: 0px 0px 10px $grey;
+                border: none;
+            }
+            .card-body{
+                font-size: $medium;
+                padding: 1rem 0rem;
+                .card-title{
+                    font-size: $large;
+                }
+                .btn-purchase{
+                    font-size: $small;
+                    width: 50%;
+                }
+                .btn-modal{
+                    position: absolute;
+                    top: -50px;
+                    right: 2px;
+                    width: 50px;
+                    height: 50px;
+                    i{
+                        font-size: $medium;
+                        transition: all 0.2s;
+                    }
+                    &:hover{
+                        background-color: rgba($greydark, 0.7);
+                        i{
+                            color: $gris;
+                            font-size: $large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//ESTILO DE MODAL - DETALLES DE PRODUCTO
+.modalDetails{
+    background-image: url(../../img/img-bg.jpg);
+    background-size: cover;
+    .modal-header{
+        background-color: rgba($gris, 0.6);
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        .modal-title{
+            font-weight: 600;
+            font-family: $subtitle;
+            font-variant: small-caps;
+            font-size: 1.7rem;
+            color: $rose;
+            padding-left: 2rem;
+            line-height: 40px;
+        }
+        .close{
+            color: $rose;
+            font-size: 2rem;
+        }
+    }
+    .modal-body{
+        text-align: center;
+        .modal-img{
+            border-radius: 5px;
+            width: 100%;
+            box-shadow: 0px 0px 15px $greydark;
+            margin-bottom: 1rem;
+        }
+        .subtitle{
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 0px;
+            margin-top: 1rem;
+        }
+        .btn-purchase-modal{
+            width: 150px;
+            background-color: $grey;
+            font-family: $subtitle;
+            font-size: $medium;
+            color: white;
+            font-size: 0.8rem;
+            border: 1px solid $grey;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                background-color: $greydark;
+            }
+            &:after {
+                content: "";
+                background: $brownbtn;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: -120px;
+                margin-top: -120%;
+                opacity: 0;
+                transition: all 0.8s
+            }
+            &:active:after {
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+                transition: 0s
+            }
+        }
+    }
+    .modal-footer{
+        padding-top: 0;
+        padding-bottom: 0;
+        .btn-footer-modal{
+            background-color: rgba($verde, 0.7);
+            font-family: $subtitle;
+            color: $greydark;
+            font-size: $small;
+            font-weight: 600;
+            border: 2px solid $greydark;
+            letter-spacing: 2px;
+            &:hover{
+                background-color: rgba($browntext, 0.7);
+            }
+        }
+    }
+}
+//Filtro por medida
+.search-boxes{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $subtitle;
+    color: $greyText;
+    height: 90px;
+    align-content: space-between;
+    .size-filter{
+        .title-option-filter{
+            font-size: 1rem;
+            display: inline-block; 
+        }
+        .option-select{
+            font-family: $body;
+            font-size: $medium;
+            height: calc(1.5em + .75rem + 2px);
+            color: $greyWords;
+            background-color: white;
+            border: 1px solid $greyBorder;
+            border-radius: .25rem;
+            padding: 0rem 0.75rem;
+            &:focus{
+                outline-color: $roselight;
+            }
+        }
+    }
+    .searchInput{
+        .searchInput-input{
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $greyWords;
+            background-color: white;
+            background-clip: padding-box;
+            border: 1px solid $greyBorder;
+            border-radius: .25rem;
+            &:focus{
+                outline-color: $roselight;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .search-boxes{
+        height: 70px;
+    }
+}
+.no-products-search{
+    background-color: rgba($browntext, 0.5);
+    text-align: center;
+    margin: 3rem 0 6rem 0;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+}
+//Boton scroll to top
+.btnTop{
+    display: none;
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; 
+    border: 3px solid white;
+    outline: none;
+    background-color: rgba($rose, 0.9); 
+    color: white; 
+    cursor: pointer;
+    padding: 5px 15px; 
+    border-radius: 50%; 
+    font-size: 2rem;
+    &:focus{
+        background-color: rgba($greyText, 0.8);
+    }
+}
+@media screen and (min-width: 992px){
+    .btnTop{
+        &:hover{
+            background-color: rgba($greyText, 0.8);
+        }
+    }
+}
+//Cartel notificación
+.producto-agregar{
+    display: none;
+    width: 250px;
+    border-radius: 15px;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($backg, 0.9);
+}
+.agregado{
+    border: 3px solid $greendark;
+    box-shadow: inset 0px 0px 20px $greendark;
+    .cartel{
+        padding: 1.75rem;
+        margin: 0;
+        font-family: $subtitle;
+        text-align: center;
+        color: $greyWords;
+    }
+}
+.unidad{
+    border: 3px solid rgb(251, 249, 136);
+    box-shadow: inset 0px 0px 20px rgb(251, 249, 136);
+    .cartel-unidad{
+        padding: 1.75rem;
+        margin: 0;
+        font-family: $subtitle;
+        text-align: center;
+        color: $greyWords;
+    }
+}
+.unidad-max{
+    border: 3px solid rgb(251, 159, 136);
+    box-shadow: inset 0px 0px 20px rgb(251, 159, 136);
+    .cartel-unidad{
+        padding: 1.25rem;
+        margin: 0;
+        font-family: $subtitle;
+        text-align: center;
+        color: $greyWords;
+    }
+}
+@media screen and (min-width: 768px){
+    .producto-agregar{
+        width: 300px;
+    }
+}

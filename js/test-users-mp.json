@@ -1,0 +1,18 @@
+[
+    {
+        "id":725259016,
+        "nickname":"TETE2501243",
+        "password":"qatest621",
+        "site_status":"active",
+        "email":"test_user_64916984@testuser.com",
+        "access token": "APP_USR-1842378098406533-030723-6ed3c2513fa80812f4547b971a1b5c42-725259016",
+        "public key": "APP_USR-e79fcf72-f34a-45fe-8fd9-75027b0b3108"
+    },
+    {
+        "id":725261107,
+        "nickname":"TESTAV2D6NNU",
+        "password":"qatest6304",
+        "site_status":"active",
+        "email":"test_user_58009030@testuser.com"
+    }
+]

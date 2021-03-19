@@ -1,0 +1,69 @@
+//COLORS
+$backg: rgb(250, 250, 250);
+$greendark: rgb(137, 196, 173);
+$green: rgb(180, 218, 203);
+$greenlight: rgb(209, 242, 235);
+$roselight: rgb(212, 189, 184);
+$rose: rgb(188, 143, 143);
+$grey: rgb(41, 41, 41);
+$greylight: rgb(117, 116, 116);
+$greydark: rgb(25, 25, 25);
+$greyText: rgb(98, 101, 103);
+$greyWords: rgb(73, 80, 87);
+$greyBorder: rgb(206, 212, 218);
+$greyShadow: rgb(215, 219, 221);
+$brown: rgb(239, 235, 233);
+$brownbtn: rgb(215, 204, 200);
+$browntext: rgb(177, 168, 165);
+$red: rgb(160, 10, 10);
+//Paleta colores pasteles
+$verde: rgb(200, 197, 189);
+$gris: rgb(219, 219, 216);
+$marron: rgb(148, 124, 114);
+$marronado: rgb(180, 172, 159);
+
+//FONT FAMILY
+$primary: 'Nanum Brush Script', cursive;
+$subtitle: 'Pangolin', cursive;
+$secondary: 'Nunito', sans-serif;
+$body: 'Open Sans Condensed', sans-serif;
+
+//FONT SIZE
+$small: 0.9rem;
+$medium: 1.1rem;
+$large:1.3rem;
+
+@mixin titles (){
+    text-align: center;
+    font-family: $primary;
+    color: $greyText;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 5px $verde;
+}
+@mixin titles-html(){
+    text-align: center;
+    font-family: $primary;
+    color: $backg;
+    background-image: url("../../img/wood.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 5px $greylight;
+    margin: 0;
+    padding: 0.75rem 0rem;
+    
+}
+@mixin icon-titles(){
+    color: $roselight;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0rem 1.5rem 0rem;
+    animation: tada;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
