@@ -17,6 +17,7 @@ const sendMail = (email, subject, text, title, cb) => {
         subject: title,
         text : `
 Nombre: ${subject}
+
 Mensaje: ${text}`
     };
     

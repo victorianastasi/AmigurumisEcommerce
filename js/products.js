@@ -161,7 +161,7 @@ function agregarAlCarrito(producto) {
 
         //cartel animado que se despliega
         $("#productoAgregado").html(`
-        <p class="cartel" id="cartel">Añadiste el amigurumi ${producto.nombre} al carrito <i class="fas fa-check-circle"></i></p>`);
+        <p class="cartel" id="cartel">Añadiste el amigurumi ${producto.nombre} al Carrito de Compras <i class="fas fa-check-circle"></i></p>`);
         $("#productoAgregado").slideDown(1000);
         setTimeout(function(){
             $("#productoAgregado").slideUp(1000);
